@@ -4,11 +4,11 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
+        y = str(num)
+        x = 0
         if num == 0:
-            x = 0
+            pass
         else: 
-            y = str(num)
-            x=0
             while x == 0 or x>=10:
                 x=0
                 for i in y:
