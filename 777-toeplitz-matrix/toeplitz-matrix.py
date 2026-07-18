@@ -6,6 +6,8 @@ class Solution(object):
         """
         y = True
         for i in range(len(matrix)):
+            if y==False:
+                break
             if i>0:
                 x = matrix[i]
                 z = matrix[i-1]
@@ -15,6 +17,7 @@ class Solution(object):
                             pass
                         else:
                             y = False
+                            break
         return y
              
                 
