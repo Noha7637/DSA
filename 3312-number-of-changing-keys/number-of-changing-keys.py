@@ -5,10 +5,9 @@ class Solution(object):
         :rtype: int
         """
         uniform_case = s.lower()
-        new_uniform_case = uniform_case
         counter = 0
-        for i in range(len(new_uniform_case)-1):
-            if new_uniform_case[i] != new_uniform_case[i+1]:
+        for i in range(len(uniform_case)-1):
+            if uniform_case[i] != uniform_case[i+1]:
                 counter = counter + 1
         return counter
             
