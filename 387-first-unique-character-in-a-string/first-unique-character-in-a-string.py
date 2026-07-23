@@ -5,14 +5,10 @@ class Solution(object):
         :rtype: int
         """
         x = -1
-        y = []
+        count = Counter(s)
+
         for i in range(len(s)):
-            y.append(s[i])
-
-        count = Counter(y)
-
-        for i in range(len(y)):
-            if count[y[i]] == 1:
+            if count[s[i]] == 1:
                 x = i
                 break           
         return x
