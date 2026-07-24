@@ -4,8 +4,7 @@ class Solution(object):
         :type sentence: str
         :rtype: bool
         """
-        arr_sentence = [i for i in sentence]
-        new_sentence = set(arr_sentence)
+        new_sentence = set(list(sentence))
         if len(new_sentence) == 26:
             return True
         else:
