@@ -4,6 +4,9 @@ class Solution(object):
         :type sentences: List[str]
         :rtype: int
         """
-        return max([len(sentence.split()) for sentence in sentences])
+        arr = []
+        for sentence in sentences:
+            arr.append(len(sentence.split()))
+        return max(arr)
 
         
