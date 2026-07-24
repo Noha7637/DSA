@@ -4,11 +4,11 @@ class Solution(object):
         :type words: List[str]
         :rtype: str
         """
+        x = ""
         for word in words:
             if word==word[::-1]:
-                return word
+                x = word
                 break
-        else: 
-            return ""
+        return x
         
         
