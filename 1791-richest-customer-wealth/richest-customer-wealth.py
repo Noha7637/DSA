@@ -4,4 +4,4 @@ class Solution(object):
         :type accounts: List[List[int]]
         :rtype: int
         """
-        return max([sum(wealth) for wealth in accounts])
+        return max(map(sum, accounts))
