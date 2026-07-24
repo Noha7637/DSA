@@ -5,6 +5,6 @@ class Solution(object):
         :type x: str
         :rtype: List[int]
         """
-        return [i for i in range(len(words)) if x in words[i]]
+        return [index for index, word in enumerate(words) if x in word]
         
         
