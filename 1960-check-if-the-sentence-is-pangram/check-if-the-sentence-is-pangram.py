@@ -4,8 +4,8 @@ class Solution(object):
         :type sentence: str
         :rtype: bool
         """
-        
-        return len(set(list(sentence))) == 26
+        sent_arr = set(list(sentence))
+        return len(sent_arr) == 26
             
         
     
