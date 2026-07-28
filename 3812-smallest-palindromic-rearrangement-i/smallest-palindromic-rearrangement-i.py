@@ -15,7 +15,7 @@ class Solution(object):
             half1 = "".join(sorted(s[0:len(s)//2]))
             half2 = half1[::-1]
             total = half1 + s[len(s)//2] + half2
-        return min([total,s])
+        return total
 
         
             
