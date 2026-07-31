@@ -1,18 +1,19 @@
 class Solution:
     def minimumPushes(self, word: str) -> int:
-        count =  Counter(word)
+        count = Counter(word)
         sorted_count = dict(sorted(count.items(), key=lambda item: item[1]))
-        arr = list(sorted_count.keys())
-        arr.reverse()
-        mycounter = 0
-        for i in range(len(word)):
-            if word[i] in arr[0:8]:
-                mycounter +=1
-            elif word[i] in arr[8:16]:
-                mycounter +=2
-            elif word[i] in arr[16:24]:
-                mycounter +=3
-            elif word[i] in arr[24:26]:
-                mycounter +=4
-        return mycounter
-        
+        arr = list(sorted_count.values())[::-1]
+        total_count = 0
+        for i in range(len(arr)):
+            if i<8:
+                total_count += arr[i]
+            elif i<16:
+                total_count += 2*arr[i]
+            elif i<24:
+                total_count += 3*arr[i]
+            elif i<26:
+                total_count += 4*arr[i]
+        return total_count
+
+
+                
