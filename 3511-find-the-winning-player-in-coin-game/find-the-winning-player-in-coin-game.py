@@ -15,12 +15,9 @@ class Solution:
                     if player1 == 115:
                         break
                 else:
-                    print(player1)
                     return "Bob"
-                    break
             if x == 0:
                 return "Alice"
-                break
             else:
                 player2+=75
                 x-=1
@@ -31,7 +28,6 @@ class Solution:
                         break
                 else:
                     return "Alice"
-                    break
             player1 = 0
             player2 = 0
     
