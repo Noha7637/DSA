@@ -3,13 +3,14 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        holder = 0
-        seeker = 0
+        ptr1 = 0
+        ptr2 = 0
 
-        while seeker < len(nums):
-            if nums[seeker] != 0:
-                nums[seeker], nums[holder] = nums[holder], nums[seeker]
-                holder += 1
-            seeker += 1
+        while ptr2 < len(nums):
+            if nums[ptr2] != 0:
+                nums[ptr2], nums[ptr1] = nums[ptr1], nums[ptr2]
+
+                ptr1 += 1
+            ptr2 += 1
 
         
