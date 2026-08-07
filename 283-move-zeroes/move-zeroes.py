@@ -3,17 +3,13 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        m = []
-        ptr = 0
-        while ptr<len(nums):
-            if nums[ptr]==0:
-                nums.pop(ptr)
-                m.append(0)
-            else:
-                ptr+=1
-        for i in range(len(m)):
-            nums.append(0)
-        
+        holder = 0
+        seeker = 0
 
+        while seeker < len(nums):
+            if nums[seeker] != 0:
+                nums[seeker], nums[holder] = nums[holder], nums[seeker]
+                holder += 1
+            seeker += 1
 
         
