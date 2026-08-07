@@ -5,6 +5,7 @@ class Solution:
         while ptr2>ptr1:
             if target == numbers[ptr1]+numbers[ptr2]:
                 return [ptr1+1, ptr2+1]
+                break
             elif target > numbers[ptr1]+numbers[ptr2]:
                 ptr1+=1
             elif target < numbers[ptr1]+numbers[ptr2]:
