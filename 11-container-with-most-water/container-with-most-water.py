@@ -4,7 +4,7 @@ class Solution:
         ptr1 = 0
         ptr2 = len(height) - 1
         for i in range(len(height)):
-            arr.append(min(height[ptr1], height[ptr2])*(abs(ptr2-ptr1)))
+            arr.append(min(height[ptr1], height[ptr2])*(ptr2-ptr1))
             if height[ptr1] > height[ptr2]:
                 ptr2-=1
             elif height[ptr2] > height[ptr1]:
