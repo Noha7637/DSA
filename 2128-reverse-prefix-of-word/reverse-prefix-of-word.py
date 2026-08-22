@@ -14,9 +14,9 @@ class Solution:
         else:
             return word
         arrtemp.reverse()
-        j = temp+1
-        while j>=temp+1 and j<len(arr):
-            arrtemp.append(arr[j])
-            j+=1
+        temp+=1
+        while temp < len(arr):
+            arrtemp.append(arr[temp])
+            temp+=1
         return "".join(arrtemp)
         
