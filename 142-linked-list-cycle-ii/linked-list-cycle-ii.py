@@ -8,7 +8,6 @@ class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         current = head
         arr = []
-        count = 0
         while current!=None:
             arr.append(current)
             if arr.count(current)==2:
