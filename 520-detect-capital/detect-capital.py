@@ -7,7 +7,7 @@ class Solution:
         if word[0]==word[0].upper():
             if count==0 or count==len(word)-1:
                 return True
-            elif count>0 and count<len(word)-1:
+            else:
                 return False
         else:
             if count==0:
