@@ -6,11 +6,10 @@ class Solution:
         for key, value in zip(alphabets_list, number_list):
             dictionary[key] = value
         list1 = list(columnTitle)
+        list1.reverse()
         add = 0
-        x = len(list1)
         for i in range(len(list1)):
-            j = i+1
-            add += (26**(x-j))*dictionary[list1[i]] 
+            add+= 26**i * dictionary[list1[i]]
         return add
 
 
