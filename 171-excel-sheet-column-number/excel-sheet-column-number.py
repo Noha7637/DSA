@@ -1,15 +1,10 @@
 class Solution:
     def titleToNumber(self, columnTitle: str) -> int:
-        dictionary = dict()
-        alphabets_list = [chr(i) for i in range(65, 91)]
-        number_list = [i for i in range(1, 27)]
-        for key, value in zip(alphabets_list, number_list):
-            dictionary[key] = value
         list1 = list(columnTitle)
         list1.reverse()
         add = 0
         for i in range(len(list1)):
-            add+= 26**i * dictionary[list1[i]]
+            add+= 26**i * (ord(list1[i])-64)
         return add
 
 
